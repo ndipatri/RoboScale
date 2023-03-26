@@ -6,6 +6,8 @@ This is a small hobby-scale with a weight capacity of 400g and a resolution of +
 
 This is a PERFECT scale for Arduino projects.  It has four wires (3.3V, GND, SCL, SDA) that can attach to any Arduino board.
 
+Approximate dimensions are 3.5" x 3" x 1.5"
+
 
 ## This scale will be custom-built to order (takes about a day to build). 
 
