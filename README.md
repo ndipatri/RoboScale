@@ -29,6 +29,8 @@ These values will be specifically derived for each scale that is custom built. W
 
 ## Price is $39.99 
 
+(the internal load cell and sparkfun scale board retail together for $17 + $10, so this is quite a deal)
+
 
 
 
