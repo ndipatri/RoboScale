@@ -1,5 +1,4 @@
-![Rob Scale](media/top.jpg)
-
+<img src="media/top.jpg"  width="300" height="300">
 
 # RoboScale - TL;DR
 
