@@ -1,12 +1,16 @@
 ![Rob Scale](media/top.jpg)
 
 
-# roboGaggia - TL;DR
+# RoboScale - TL;DR
 
 This is a small hobby-scale with a weight capacity of 400g and a resolution of +/- .5 grams.  It is connected through an 18” cable to a [SparkFun I2C Qwiic Scale breakout board](https://www.sparkfun.com/products/15242).
 
-This scale has been calibrated
+This is a PERFECT scale for Arduino projects.
+
+The scale is built using an amateur 3D printer, so it has some blemishes, but it still looks cool!
+
+This scale has been calibrated.  So if you put something on it, say, that weighs 50g, the scale will read 50g +/- .5g.
 
 
 
-You can visit my [RoboScale](https://github.com/ndipatri/RoboScale) GitHub repository to see how you can integrate RoboScale with your Arduino project.
+
