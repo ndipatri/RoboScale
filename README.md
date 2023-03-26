@@ -27,7 +27,7 @@ These values will be specifically derived for each scale that is custom built. W
 
 100% money-back satisfaction guarantee.
 
-## Price is $39.99 
+## Price is $59.99 
 
 (the internal load cell and sparkfun scale board retail together for $17 + $10, so this is quite a deal)
 
