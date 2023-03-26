@@ -9,7 +9,7 @@ This is a PERFECT scale for Arduino projects.
 
 ## This scale will be custom-built to order (takes about a day to build). 
 
-The scale is built using an amateur 3D printer, so it has some blemishes, but it still looks cool!  Eventually, I might use a professional printing service, but for now, we'll just keep this simple :-)
+The scale is built using an amateur 3D printer, so it has some blemishes, but it still looks cool!  Eventually, I might use a professional printing service, but for now, we'll just keep this simple and inexpensive :-)
 
 This scale has been calibrated.  So if you put something on it, say, that weighs 50g, the scale will read 50g +/- .5g. 
 
@@ -21,9 +21,9 @@ double SCALE_FACTOR = 0.000666;
 double SCALE_OFFSET = 2.91;  
 ```
 
-These values will be specifically derived for the scale that is custom built for each order. When you receive your scale, you will be given the exact 'SCALE_FACTOR' and 'SCALE_OFFSET' that you need to provide in your Arduino code.
+These values will be specifically derived for each scale that is custom built. When you receive your scale, you will be given the exact 'SCALE_FACTOR' and 'SCALE_OFFSET' that you need to provide in your Arduino code.
 
-
+100% money-back satisfaction guarantee.
 
 ## Price is $39.99 
 
