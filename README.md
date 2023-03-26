@@ -1,4 +1,4 @@
-<img src="media/top.jpg"  width="300" height="300">
+<img src="media/top.jpg"  width="300" height="300"> <img src="media/bottom.jpg"  width="300" height="300"> <img src="media/side.jpg"  width="300" height="300">
 
 # RoboScale - TL;DR
 
