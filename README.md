@@ -4,7 +4,7 @@
 
 This is a small hobby-scale with a weight capacity of 400g and a resolution of +/- .5 grams.  It is connected through an 18” shielded, twisted-pair RJ-45 cable to a [SparkFun I2C Qwiic Scale breakout board](https://www.sparkfun.com/products/15242).
 
-This is a PERFECT scale for Arduino projects.
+This is a PERFECT scale for Arduino projects.  It has four wires (3.3V, GND, SCL, SDA) that can attach to any Arduino board.
 
 
 ## This scale will be custom-built to order (takes about a day to build). 
