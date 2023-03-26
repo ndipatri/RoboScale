@@ -1,4 +1,4 @@
-![Robo Gaggia](media/gaggia1.jpg)
+![Rob Scale](media/gaggia1.jpg)
 
 # Robo Gaggia in Action!
 [Video of RoboGaggia!](https://youtu.be/2jmbiQQChrA)
