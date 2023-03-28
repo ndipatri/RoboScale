@@ -2,7 +2,7 @@
 
 # RoboScale - TL;DR
 
-This is a small hobby-scale with a weight capacity of 400g and a resolution of +/- .5 grams.  It is connected through an 18” shielded, twisted-pair RJ-45 cable to a [SparkFun I2C Qwiic Scale breakout board](https://www.sparkfun.com/products/15242).
+This is a small hobby-scale with a weight capacity of 400g and a resolution of +/- .5 grams.  Internally, this scale has a 500g load cell and a [SparkFun I2C Qwiic Scale breakout board](https://www.sparkfun.com/products/15242).  The output connector is a [4-pin I2C Qwiic connector](https://www.sparkfun.com/qwiic#:~:text=SparkFun's%20Qwiic%20Connect%20System%20uses,%2C%20LCDs%2C%20relays%20and%20more.)
 
 This is a PERFECT scale for Arduino projects.  It has four wires (3.3V, GND, SCL, SDA) that can attach to any Arduino board.
 
