@@ -17,7 +17,7 @@ Approximate dimensions are 3.5" x 3" x 1.5"
 
 The scale is built using an amateur 3D printer, so it has some blemishes, but it still looks cool!  Eventually, I might use a professional printing service, but for now, we'll just keep this simple and inexpensive :-)
 
-This scale has been calibrated.  So if you put something on it, say, that weighs 50g, the scale will read 50g +/- .5g. 
+This scale has been calibrated.  So if you put something on it, say, that weighs 50g, the scale will read 50g +/- .2g. 
 
 I've provided an example [Arduino .INO file](src/roboScale.ino) that demonstrates exactly how to use this scale. Notice the scale factor code:
 
