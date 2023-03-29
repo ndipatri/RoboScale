@@ -36,7 +36,7 @@ These values will be specifically derived for each scale that is custom built. W
 (the internal load cell and sparkfun scale board retail together for $27, so this is quite a deal)
 
 
-# [On sale @ Etsy](https://www.etsy.com/listing/1443511503/arduino-ready-espresso-scale?ref=listings_manager_grid)
+### [On sale @ Etsy](https://www.etsy.com/listing/1443511503/arduino-ready-espresso-scale?ref=listings_manager_grid)
 
-# [and on Facebook Marketplace](https://www.facebook.com/marketplace/item/1831684600536976/): 
+### [and on Facebook Marketplace](https://www.facebook.com/marketplace/item/1831684600536976/)
 
