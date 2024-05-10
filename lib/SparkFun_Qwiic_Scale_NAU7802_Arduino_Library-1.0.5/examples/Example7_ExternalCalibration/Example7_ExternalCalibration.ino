@@ -1,23 +1,38 @@
-/******************************************************/
-//       THIS IS A GENERATED FILE - DO NOT EDIT       //
-/******************************************************/
+/*
+  Use the Qwiic Scale to read load cells and scales
+  By: Paul Clark @ SparkFun Electronics
+  Date: February 25th, 2024
+  License: MIT - see License.md for more details.
 
-#line 1 "/Users/ndipatri/development/roboGaggia/roboScale/RoboScale/src/roboScale.ino"
-#include <SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.h>
-#include <Arduino.h>
+  This example shows how to setup a scale complete with zero offset (tare),
+  and linear calibration using the NAU7802's external calibration mode.
 
-void setup();
-void loop();
-void calibrateScale(void);
-void recordSystemSettings(void);
-void readSystemSettings(void);
-#line 4 "/Users/ndipatri/development/roboGaggia/roboScale/RoboScale/src/roboScale.ino"
+  This is similar to Example2, except here we use the NAU7802's external calibration
+  function and internal offset register to store the zero point. By default .begin
+  performs an _internal_ calibration. In this example we overwrite the offset register
+  with the result of the _external_ calibration.
+
+  If you know the calibration and offset values you can send them directly to
+  the library and NAU7802. This is useful if you want to maintain values between power cycles
+  in EEPROM or Non-volatile memory (NVM). If you don't know these values then
+  you can go through a series of steps to calculate the offset and calibration value.
+
+  SparkFun labored with love to create this code. Feel like supporting open
+  source? Buy a board from SparkFun!
+  https://www.sparkfun.com/products/15242
+
+  Hardware Connections:
+  Plug a Qwiic cable into the Qwiic Scale and a RedBoard Qwiic
+  If you don't have a platform with a Qwiic connection use the SparkFun Qwiic Breadboard Jumper (https://www.sparkfun.com/products/14425)
+  Open the serial monitor at 115200 baud to see the output
+*/
+
+#include <Wire.h>
+#include <EEPROM.h> //Needed to record user settings
+
+#include "SparkFun_Qwiic_Scale_NAU7802_Arduino_Library.h" // Click here to get the library: http://librarymanager/All#SparkFun_NAU8702
+
 NAU7802 myScale; //Create instance of the NAU7802 class
-
-// These values are scale-specific and need to be derived!
-double SCALE_FACTOR = 0.000666;   
-double SCALE_OFFSET = 2.91;  
-
 
 //EEPROM locations to store 4-byte variables
 #define EEPROM_SIZE 100 //Allocate 100 bytes of EEPROM
@@ -34,12 +49,9 @@ const bool allowNegative = true;
 
 void setup()
 {
+  EEPROM.begin(EEPROM_SIZE); //Some platforms need this. Comment this line if needed
 
-  // This instructs the core to not connect to the
-  // Particle cloud until explicitly instructed to
-  // do so from within our service loop ... This is so the device
-  // has the ability to operate offline.
-  SYSTEM_MODE(MANUAL);
+  delay(1000); //Some platforms need this. Comment this line if needed
 
   Serial.begin(115200);
   Serial.println(F("Qwiic Scale Example"));
@@ -92,10 +104,7 @@ void loop()
     if (incoming == 'c') //Calibrate
       calibrateScale();
   }
-
-  delay(50);
 }
-
 
 //Gives user the ability to set a known weight on the scale and calculate a calibration factor
 void calibrateScale(void)
@@ -128,9 +137,9 @@ void calibrateScale(void)
 
   //Tell the library how much weight is currently on it
   //We are sampling slowly, so we need to increase the timeout too
-  myScale.calculateCalibrationFactor(54.8, 64, 3000); //64 samples at 40SPS. Use a timeout of 3 seconds
+  myScale.calculateCalibrationFactor(weightOnScale, 64, 3000); //64 samples at 40SPS. Use a timeout of 3 seconds
   Serial.print(F("Weight on scale: "));
-  Serial.println(54.8, 2);
+  Serial.println(weightOnScale, 2);
   Serial.print(F("New library calibration factor: "));
   Serial.println(myScale.getCalibrationFactor(), 2);
 
@@ -145,6 +154,8 @@ void recordSystemSettings(void)
   //Get various values from the library and commit them to NVM
   EEPROM.put(LOCATION_CALIBRATION_FACTOR, myScale.getCalibrationFactor());
   EEPROM.put(LOCATION_ZERO_OFFSET, myScale.getChannel1Offset());
+
+  EEPROM.commit(); //Some platforms need this. Comment this line if needed
 }
 
 //Reads the current system settings from EEPROM
